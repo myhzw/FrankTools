@@ -4,7 +4,7 @@
  * @Author: Frank.Hoo
  * @Date: 2020-01-11 14:26:53
  * @LastEditors  : Frank.Hoo
- * @LastEditTime : 2020-01-13 10:35:36
+ * @LastEditTime : 2020-01-13 12:00:56
  */
 
 
@@ -39,7 +39,10 @@ const FrankTools = {
     },
     /**
      * @name: toDate
-     * @msg: 格式化转化日期
+     * @msg: 格式化转化日期--
+     *          datetime:1578879099000,//时间戳或者日期类型,
+     *          symbol:'/',//连接的字符串,
+     *          format:false,//默认为false如果为true返回年月日类型
      * @test: {datetime:1578879099000|2020-1-13 9:31:39,symbol:'/',format=false}
      * @param {datetime,symbol,format} 
      * @return: 2020/01/13 09:31:52

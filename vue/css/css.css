@@ -1,0 +1,281 @@
+/* ======================================================================== 全局生效设置  (最好不改动它) */
+/* 页面外框 */
+page{ width: 100%; min-height: 100%; position: relative; font-size: 28upx; color: black; line-height: 1.0; background-color: #F5F5F9; }
+/* 取消按钮原样式 */
+button{ margin: 0; padding: 0; background-color: inherit; border: none; border-radius: 0; outline: none; box-sizing: border-box; }
+button::after{ border: none; }
+/* view容器 */
+view{
+	vertical-align: middle; /* 图片、文字纵向居中对齐 */
+	word-break: break-all; /* 英文文字强制换行 */
+	box-sizing: border-box; /* 元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制 */
+}
+/* 标签元素隐藏 */
+.displayNone{ display: none !important; }
+.displayVisibility{ visibility: hidden !important; }
+
+
+
+/* ======================================================================== 标签布局所用 */
+/* 定位布局 */
+.position-fixed{ position: fixed; }
+.position-sticky{ position: sticky; }
+
+/* 弹性盒子布局 */
+.fboxRow{ display: flex; flex-direction: row; }
+.fboxCol{ display: flex; flex-direction: column; }
+.fboxWrap{ display: flex; flex-wrap: wrap; }
+.flex1{ flex: 1; }
+.flex2{ flex: 2; }
+.flex3{ flex: 3; }
+.flex4{ flex: 4; }
+.flex5{ flex: 5; }
+.flex6{ flex: 6; }
+/**/
+.Xstart{ justify-content: flex-start; }
+.Xcenter{ justify-content: center; }
+.Xend{ justify-content: flex-end; }
+.Xbetween{ justify-content: space-between; }
+.Xaround{ justify-content: space-around; }
+/**/
+.Ystart{ align-items: flex-start; }
+.Ycenter{ align-items: center; }
+.Yend{ align-items: flex-end; }
+.Ybaseline{ align-items: baseline; }
+.Ystretch{ align-items: stretch; }
+
+
+
+/* ======================================================================== 页面公用 */
+/* 文字格式 */
+.font12{ font-size: 12upx; } .font13{ font-size: 13upx; } .font14{ font-size: 14upx; } 
+.font15{ font-size: 15upx; } .font16{ font-size: 16upx; } .font17{ font-size: 17upx; } 
+.font18{ font-size: 18upx; } .font19{ font-size: 19upx; } .font20{ font-size: 20upx; } 
+.font21{ font-size: 21upx; } .font22{ font-size: 22upx; } .font23{ font-size: 23upx; } 
+.font24{ font-size: 24upx; } .font25{ font-size: 25upx; } .font26{ font-size: 26upx; } 
+.font27{ font-size: 27upx; } .font28{ font-size: 28upx; } .font29{ font-size: 29upx; } 
+.font30{ font-size: 30upx; } .font31{ font-size: 31upx; } .font32{ font-size: 32upx; } 
+.font33{ font-size: 33upx; } .font34{ font-size: 34upx; } .font35{ font-size: 35upx; } 
+.font36{ font-size: 36upx; } .font37{ font-size: 37upx; } .font38{ font-size: 38upx; } 
+.font39{ font-size: 39upx; } .font40{ font-size: 40upx; }
+/* 文字显示行数，超出部分会是"..." */
+.font-ell1{ overflow: hidden; text-overflow: ellipsis; word-break: break-all; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+.font-ell2{ overflow: hidden; text-overflow: ellipsis; word-break: break-all; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.font-ell3{ overflow: hidden; text-overflow: ellipsis; word-break: break-all; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+/* 文字对齐方式 */
+.font-left{ text-align: left; }
+.font-center{ text-align: center; }
+.font-right{ text-align: right; }
+/* 文字间隔 */
+.font-spacing-1px{ letter-spacing: 1px; }
+.font-spacing-2px{ letter-spacing: 2px; }
+.font-spacing-3px{ letter-spacing: 3px; }
+/* 文字行高 */
+.font-line-1o2{ line-height: 1.2; }
+.font-line-1o5{ line-height: 1.5; }
+.font-line-1o8{ line-height: 1.8; }
+/* 文字加粗 */
+.font-weight{ font-weight: bold; }
+/**/
+/* 文字颜色 */
+.font-red{ color: #e54d42; }
+.font-orange{ color: #f37b1d; }
+.font-yellow{ color: #fbbd08; }
+.font-olive{ color: #8dc63f; } /* 橄榄绿 */
+.font-green{ color: #39b54a; }
+.font-cyan{ color: #1cbbb4; } /* 青 */
+.font-blue{ color: #0081ff; }
+.font-purple{ color: #6739b6; } /* 紫色 */
+.font-mauve{ color: #9c26b0; } /* 玫瑰红 */
+.font-pink{ color: #e03997; }
+.font-brown{ color: #a5673f; }
+.font-grey{ color: #8799a3; }
+.font-gray{ color: #f0f0f0; }
+.font-black{ color: #333333; }
+.font-white{ color: #ffffff; }
+
+/* 背景颜色 */
+.bg-red{ background-color: #e54d42; }
+.bg-orange{ background-color: #f37b1d; }
+.bg-yellow{ background-color: #fbbd08; }
+.bg-olive{ background-color: #8dc63f; } /* 橄榄绿 */
+.bg-green{ background-color: #39b54a; }
+.bg-cyan{ background-color: #1cbbb4; } /* 青 */
+.bg-blue{ background-color: #0081ff; }
+.bg-purple{ background-color: #6739b6; } /* 紫色 */
+.bg-mauve{ background-color: #9c26b0; } /* 玫瑰红 */
+.bg-pink{ background-color: #e03997; } /* 粉色 */
+.bg-brown{ background-color: #a5673f; } /* 棕色 */
+.bg-grey{ background-color: #8799a3; }
+.bg-gray{ background-color: #f0f0f0; }
+.bg-black{ background-color: #333333; }
+.bg-white{ background-color: #ffffff; }
+/* 浅色系 */
+.bg-red-light{ background-color: #fadbd9; }
+.bg-orange-light{ background-color: #fde6d2; }
+.bg-yellow-light{ background-color: #FEF4D6; }
+.bg-olive-light{ background-color: #e8f4d9; } /* 橄榄绿 */
+.bg-green-light{ background-color: #D7F0DB; }
+.bg-cyan-light{ background-color: #d2f1f0; } /* 青 */
+.bg-blue-light{ background-color: #cce6ff; }
+.bg-purple-light{ background-color: #e1d7f0; } /* 紫色 */
+.bg-mauve-light{ background-color: #ebd4ef; } /* 玫瑰红 */
+.bg-pink-light{ background-color: #f9d7ea; } /* 粉色 */
+.bg-brown-light{ background-color: #ede1d9; } /* 棕色 */
+.bg-grey-light{ background-color: #e7ebed; }
+/* 渐变系 */
+.bg-red-gradual{ background: linear-gradient(45deg, #f43f3b, #ec008c); }
+.bg-orange-gradual{ background: linear-gradient(45deg, #ff9700, #ed1c24); }
+.bg-green-gradual{ background: linear-gradient(45deg, #39b54a, #8dc63f); }
+.bg-blue-gradual{ background: linear-gradient(45deg, #0081ff, #1cbbb4); }
+.bg-purple-gradual{ background: linear-gradient(45deg, #9000ff, #5e00ff); }
+.bg-pink-gradual{ background: linear-gradient(45deg, #ec008c, #6739b6); }
+/* 阴影 */
+.shadow-blur{ position: relative; }
+.shadow-blur::before{ content: ""; width: 100%; height: 100%; position: absolute; top: 10upx; left: 10upx; z-index: -1; display: block; border-radius: inherit; background: inherit; filter: blur(10upx); opacity: 0.4; transform-origin: 0 0; transform: scale(1, 1); }
+
+/* 层级样式 */
+.index-1x{ z-index: 10; }
+.index-2x{ z-index: 30; }
+.index-3x{ z-index: 50; }
+.index-4x{ z-index: 70; }
+.index-5x{ z-index: 90; }
+
+/* 边框样式 */
+.border-1px{ border-width: 1px; border-style: solid; border-color: #d2d2d2; }
+.border-2px{ border-width: 2px; border-style: solid; border-color: #d2d2d2; }
+.border-3px{ border-width: 3px; border-style: solid; border-color: #d2d2d2; }
+.border-4px{ border-width: 4px; border-style: solid; border-color: #d2d2d2; }
+.border-5px{ border-width: 5px; border-style: solid; border-color: #d2d2d2; }
+.border-round{ border-radius: 7px; }
+
+/* 点击效果 */
+.click-color{ transition: 0.1s; transition-timing-function: linear; }
+.click-color:active{ opacity: 0.6; }
+.click-scale{ transition: 0.1s; transition-timing-function: linear; }
+.click-scale:active{ opacity: 0.9; transform: scale(0.95); box-shadow: 0px 3px 10px rgba(0,0,0,0.4);  }
+.click-translateY{ transition: 0.1s; transition-timing-function: linear; }
+.click-translateY:active{ opacity: 0.8; transform: translateY(3px); }
+
+
+
+/* ======================================================================== 动画 */
+/* 
+	1. 位移类型的动画 
+*/
+/* 移动 X：0 → 100% */
+@keyframes zdo_translateX_0_100{ 0%{ transform: translateX(0); } 100%{ transform: translateX(100%); } }
+.animt_translateX_0_100{
+	animation-name: zdo_translateX_0_100;
+	animation-duration: 0.3s; 
+	animation-timing-function: linear;
+	animation-fill-mode: both;
+}
+/* 移动 X：100% → 0 */
+@keyframes zdo_translateX_100_0{ 0%{ transform: translateX(100%); } 100%{ transform: translateX(0); } }
+.animt_translateX_100_0{
+	animation-name: zdo_translateX_100_0;
+	animation-duration: 0.3s; 
+	animation-timing-function: linear;
+	animation-fill-mode: both;
+}
+/* 移动 Y：70px  → 0px */
+@keyframes zdo_translateY_70_0{ 0%{ opacity: 0; transform: translateY(70px); } 100%{ opacity: 1; transform: translateY(0); } }
+.animt_translateY_70_0{
+	animation-name: zdo_translateY_70_0;
+	animation-duration: 0.3s; 
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+/* 移动 Y：0px  → 70px */
+@keyframes zdo_translateY_0_70{ 0%{ opacity: 1; transform: translateY(0); } 100%{ opacity: 0; transform: translateY(70px); } }
+.animt_translateY_0_70{
+	animation-name: zdo_translateY_0_70;
+	animation-duration: 0.3s; 
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+/* 移动 Y：100%  → 0px */
+@keyframes zdo_translateY_100_0{ 0%{ opacity: 0; transform: translateY(100%); } 100%{ opacity: 1; transform: translateY(0); } }
+.animt_translateY_100_0{
+	animation-name: zdo_translateY_100_0;
+	animation-duration: 0.3s; 
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+/* 移动 Y：0px  → 100% */
+@keyframes zdo_translateY_0_100{ 0%{ opacity: 1; transform: translateY(0); } 100%{ opacity: 0; transform: translateY(100%); } }
+.animt_translateY_0_100{
+	animation-name: zdo_translateY_0_100;
+	animation-duration: 0.3s; 
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+/*
+	2. 透明类型的动画
+*/
+/* 透明度：0 → 1 */
+@keyframes zdo_opacity_0_1{ 0%{ opacity: 0; } 100%{ opacity: 1; } }
+.animt_opacity_0_1{
+	animation-name: zdo_opacity_0_1;
+	animation-duration: 0.3s; 
+	animation-timing-function: linear;
+	animation-fill-mode: both;
+}
+/* 透明度：1 → 0 */
+@keyframes zdo_opacity_1_0{ 0%{ opacity: 1; } 100%{ opacity: 0; } }
+.animt_opacity_1_0{
+	animation-name: zdo_opacity_1_0;
+	animation-duration: 0.3s; 
+	animation-timing-function: linear;
+	animation-fill-mode: both;
+}
+/*
+	3. 大小、旋转类型的动画
+*/
+/*缩放：0.5 → 1*/
+@keyframes zdo_scale_o5_1{ 0%{ opacity: 0; transform: scale(0.5); } 100%{ opacity: 1; transform: scale(1); } }
+.animt_scale_o5_1{
+	animation-name: zdo_scale_o5_1;
+	animation-duration: 0.3s; 
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+/*缩放：1 → 1.1 → 0.5*/
+@keyframes zdo_scale_1_o5{ 0%{ opacity: 1; transform: scale(1); } 15%{ opacity: 1; transform: scale(1.1); } 100%{ opacity: 0; transform: scale(0.5); } }
+.animt_scale_1_o5{
+	animation-name: zdo_scale_1_o5;
+	animation-duration: 0.3s; 
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+/*旋转：0deg → 360deg*/
+@keyframes zdo_rotate_0_360{ 0%{ transform: rotate(0deg); } 100%{ transform: rotate(360deg); } }
+.animt_rotate_0_360_infinite{
+	animation-name: zdo_rotate_0_360;
+	animation-duration: 1s; 
+	animation-timing-function: linear;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
+/*
+	4. 特殊类型的动画
+*/
+/* 透明度：0.2 → 1 → 0.2    0.2的时间占绝大部分（即大部分时间透明），可用于wifi加载闪烁 */
+@keyframes zdo_opacity_o2_1_o2{ 0%{ opacity: 0.2; } 25%{ opacity: 1; } 50%{ opacity: 0.2; } 100%{ opacity: 0.2; } }
+.animt_opacity_o2_1_o2_infinite{
+	animation-name: zdo_opacity_o2_1_o2;
+	animation-duration: 1s; 
+	animation-timing-function: linear;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
+/* 位移：0px → -40px → 0px    0的时间占绝大部分（即大部分时间没动），可用于load加载上下跳动 */
+@keyframes zdo_translateY_0_30_0{ 0%{ transform: translateY(0); } 25%{ transform: translateY(-25px); } 50%{ transform: translateY(0); } 100%{ transform: translateY(0); } }
+.animt_translateY_0_30_0_infinite{
+	animation-name: zdo_translateY_0_30_0;
+	animation-duration: 1s; 
+	animation-timing-function: linear;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
