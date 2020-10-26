@@ -65,7 +65,60 @@ const FrankTools = {
         let dateStr =  obj.format?year + '年' + month + '月' + day + '日 ' + hour + ':' + min + ':' + sec
         :year + obj.symbol + month + obj.symbol + day +' '+ hour + ':' + min + ':' + sec;
         return dateStr;
-    }
+    },
+    /**
+     * 判断是否是未定义
+     */
+      isUndef (v) {
+        return v === undefined || v === null
+      },
+      /**
+     * 判断是否是定义
+     */
+      isDef (v) {
+        return v !== undefined && v !== null
+      },
+
+      /**
+     * 判断是否是true
+     */
+      isTrue (v) {
+        return v === true
+      },
+
+      /**
+     * 判断是否是false
+     */
+      isFalse (v) {
+        return v === false
+      },
+
+      /**
+     * 判断是否是纯对象
+     * @param {对象} obj
+     */
+      isPlainObject (obj) {
+        return Object.prototype.toString.call(obj) === '[object Object]'
+      },
+
+      /**
+     * 返回给定变量的原始类型字符串
+     * @param {对象} value
+     */
+      toRawType (value) {
+        return Object.prototype.toString.call(value).slice(8, -1)
+      },
+
+      /**
+     * 复制相同对象属性的值
+     * @param {需要复制的对象} main
+     * @param {被复制的对象} vice
+     */
+      copySameObjKey (main, vice) {
+        if (this.isPlainObject(main) && this.isPlainObject(vice)) {
+          return Object.keys(main).forEach(key => { main[key] = vice[key] })
+        }
+      },
     
 }
 
